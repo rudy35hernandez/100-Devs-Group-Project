@@ -1,5 +1,5 @@
 
-// target the delete button and add an event listener to each
+/// target the delete button and add an event listener to each
 const deleteBtn = document.querySelectorAll('.del')
 
 Array.from(deleteBtn).forEach((el)=>{
