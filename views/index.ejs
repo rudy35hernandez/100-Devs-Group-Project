@@ -60,9 +60,9 @@
                             <span> "<%= el.description %>" </span>
                           </section>
                           <hr>
-
-                    <span><i class="fas fa-trash del"></i>
-                    </span>
+                          <% if(user.githubUsername == el.userName){%>
+                    <span><i class="fas fa-trash del"></i> </span>
+                    <%}%>
                           </li>
                   
 
