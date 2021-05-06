@@ -29,6 +29,21 @@ module.exports = {
     }
   },
 
+  likePost: async (req, res) => {
+    try {
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $inc: { likes: 1 },
+        }
+      );
+      console.log("Likes +1");
+      res.redirect(`/index/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
   deletePost: async (req, res) => {
     console.log(req.body.postIdFromJSFile);
     try {
@@ -40,5 +55,6 @@ module.exports = {
       console.log(err);
     }
   },
+
 
 };

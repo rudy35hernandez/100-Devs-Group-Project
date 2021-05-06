@@ -63,6 +63,15 @@
                           <% if(user.githubUsername == el.userName){%>
                     <span><i class="fas fa-trash del"></i> </span>
                     <%}%>
+                          <hr>
+                          <form
+                          class="col-1"
+                          action="/posts/likePost/<%= el.id %>?_method=PUT"
+                          method="POST"
+                        >
+                          <button class="fa fa-heart" type="submit"></button>
+                        </form>
+                        <h3 class="col-3">Likes: <%= el.likes %></h3>
                           </li>
                   
 
@@ -71,6 +80,8 @@
             
             
           <% } %>
+
+          
 
           
       </ul>
