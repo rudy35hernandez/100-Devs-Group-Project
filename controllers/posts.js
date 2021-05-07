@@ -38,7 +38,7 @@ module.exports = {
         }
       );
       console.log("Likes +1");
-      res.redirect(`/index/${req.params.id}`);
+      res.redirect("/");
     } catch (err) {
       console.log(err);
     }
