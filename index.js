@@ -52,6 +52,7 @@ app.use("/", mainRouter);
 app.use("/posts", postsRouter);
 // app.use("/profile", postsRouter);
 
+const PORT = process.env.PORT;
 
 app.listen(PORT || PORT, () => {
   console.log(`Server is running on ${PORT}`);
