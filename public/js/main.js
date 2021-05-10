@@ -1,5 +1,5 @@
 
-/// target the delete button and add an event listener to each
+// target the delete button and add an event listener to each
 const deleteBtn = document.querySelectorAll('.del')
 
 Array.from(deleteBtn).forEach((el)=>{
@@ -30,7 +30,25 @@ async function deletePost(){
     }
 }
 
-// target the edit button and add an event listener to each
+function shuffle (arr) {
+    var j, x, index;
+    for (index = arr.length - 1; index > 0; index--) {
+        j = Math.floor(Math.random() * (index + 1));
+        x = arr[index];
+        arr[index] = arr[j];
+        arr[j] = x;
+    }
+    return arr;
+}
 
-// create a function that links to PUT request - updating the description
+const contributors = ['MagicMarcos','jennifertoops','nicoolel', 'rudy35hernandez', 'wfarid']
+const shuffledContributors = shuffle(contributors)
+console.log(shuffledContributors);
+let str="Contributors (Random Order): "
+for (const name of shuffledContributors){
+  str += `<a target="_blank" href=https://github.com/${name}>${name}</a>, `
+}
+str = str.substring(0, str.length - 2)
+console.log(str)
 
+document.getElementById('li-contributors').innerHTML = str
