@@ -53,6 +53,6 @@ app.use("/posts", postsRouter);
 // app.use("/profile", postsRouter);
 
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5904, () => {
   console.log(`Server is running on ${PORT}`);
 });
